@@ -1,0 +1,54 @@
+.App {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+li {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+select  {
+  margin: 10px 0 0;
+}
+
+label {
+  width: 350px;
+}
+
+.task-input,
+.add-task_button {
+  border: 2px solid aqua;
+  border-radius: 4px;
+  margin: 0 5px;
+  color: aqua;
+}
+
+.task-input {
+  width: 210px;
+}
+
+.add-task_button:active {
+  color: white;
+  background: green;
+  border: 3px solid grey;
+}
+
+.delete-button {
+  color: red;
+  background: white;
+  border: 2px solid red;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.update-button {
+  color: orange;
+  background: white;
+  border: 2px solid orange;
+  border-radius: 5px;
+  margin: 5px;
+}

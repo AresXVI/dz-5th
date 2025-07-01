@@ -1,0 +1,48 @@
+.filter-tabs {
+    position: relative;
+    display: flex;
+    border: 1px solid aqua;
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+    margin-bottom: 15px;
+  }
+  
+  .filter-tabs button {
+    flex: 1;
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: aqua;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .filter-tabs .active {
+    font-weight: bold;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 33.33%;
+    background: rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    z-index: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .slider.all {
+    transform: translateX(0%);
+  }
+  
+  .slider.active {
+    transform: translateX(100%);
+  }
+  
+  .slider.completed {
+    transform: translateX(200%);
+  }
+  
