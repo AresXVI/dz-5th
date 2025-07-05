@@ -11,9 +11,6 @@ const fetchCards  = async () => {
     return response.data
 }
 
-
-
-
 const CardList = () => {
     
     const { addCardData, cards} = useCardStore()
