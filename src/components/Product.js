@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Card, Image } from 'antd';
-import { HeartOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { HeartOutlined, ShoppingCartOutlined, CreditCardOutlined } from '@ant-design/icons';
 import style from './components.module.css'
-import { useStoreProject } from '../features/store';
+import { useAuthStore, useStoreProject } from '../features/store';
+import { useNavigate } from 'react-router-dom';
 
 
 const Product = ({product}) => {
@@ -14,6 +15,15 @@ const Product = ({product}) => {
 
     const favoriteItem = favorites.find((i) => i.id === product.id)
     const isFavoriteCompleted  = favoriteItem?.completed
+
+
+
+    const { user } = useAuthStore()
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/checkout', { state: {product}})
+        
+    }
 
     return (
         <Card 
@@ -41,6 +51,9 @@ const Product = ({product}) => {
                         style={{cursor: 'pointer'}}
                         className={isFavoriteCompleted ? style.clickedFavorite : ''}
                     />
+                    <CreditCardOutlined 
+                        onClick={handleClick}
+                        style={{cursor: 'pointer'}}/>
                 </div>
             </div>
         </Card>

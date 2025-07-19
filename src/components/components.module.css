@@ -3,6 +3,7 @@
     border-radius: 10px;
     overflow: hidden;
     transition: 0.3s;
+    margin: 0 0 15px 0;
 }
 
 .card:hover {
@@ -37,4 +38,22 @@
 
 .clickedFavorite {
     color: red;
+}
+
+.navbar__container {
+    display: 'flex'; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.navbar__title {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 10px;
+}
+
+.navbar__body {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
 }

@@ -15,7 +15,7 @@ const Home = () => {
     const {type, setType} = useFilters()
     const { priceFilter, setPriceFilter } = useStoreProject()
 
-    const  filteredProducts = data?.products.filter(product =>
+    const filteredProducts = data?.products.filter(product =>
         product.price >= priceFilter[0] && product.price <= priceFilter[1]
     )
 
